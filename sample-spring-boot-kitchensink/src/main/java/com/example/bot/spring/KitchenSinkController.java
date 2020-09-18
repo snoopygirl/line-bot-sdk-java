@@ -441,7 +441,7 @@ public class KitchenSinkController {
                                                + source);
                 }
 				break;
-				}
+			}
             case "confirm": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "Do it?",
@@ -629,26 +629,25 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
-				case "rmc": //short for room_member_count
+			case "rmc": //short for room_member_count
 				Source source = event.getSource();
-				//if (source instanceof RoomSource) {
-					RoomMemberCountResponse roomMemberCountResponse = lineMessagingClient.getRoomMemberCount(
-                            ((RoomSource) source).getRoomId()).get();
-                    this.replyText(replyToken, "Room member count: "
-                                               + roomMemberCountResponse.getCount());
+					//if (source instanceof RoomSource) {
+				RoomMemberCountResponse roomMemberCountResponse = lineMessagingClient.getRoomMemberCount(((RoomSource) source).getRoomId()).get();
+                this.replyText(replyToken, "Room member count: "
+                                           + roomMemberCountResponse.getCount());
                 /*} else {
-                    this.replyText(replyToken, "You can't use 'room_member_count' command  for "
+                this.replyText(replyToken, "You can't use 'room_member_count' command  for "
                                                + source);
                 }*/
 				break;
-				case "test123":
+			case "test123":
 				log.info("tests the bot is responding with default message {}: {}", replyToken, "Jacob is cool.");
 				this.replyText(
                         replyToken,
                         "Jacob is cool."
                 );
 				break;
-				default:
+			default:
 				log.info("Does nothing {}: {}", replyToken, text);
                 /*log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
