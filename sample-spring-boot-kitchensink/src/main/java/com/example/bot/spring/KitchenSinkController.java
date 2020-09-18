@@ -441,6 +441,18 @@ public class KitchenSinkController {
                                                + source);
                 }
                 break;
+			case "rmc": { //short for room_member_count
+                Source source = event.getSource();
+                //if (source instanceof RoomSource) {
+                    RoomMemberCountResponse roomMemberCountResponse = lineMessagingClient.getRoomMemberCount(
+                            ((RoomSource) source).getRoomId()).get();
+                    this.replyText(replyToken, "Room member count: "
+                                               + roomMemberCountResponse.getCount());
+                /*} else {
+                    this.replyText(replyToken, "You can't use 'room_member_count' command  for "
+                                               + source);
+                }*/
+                break;
             }
             case "confirm": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
@@ -629,12 +641,19 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
-            default:
-                log.info("Returns echo message {}: {}", replyToken, text);
+			case "test123":
+                log.info("tests the bot is responding with default message {}: {}", replyToken, "Jacob is cool.");
                 this.replyText(
                         replyToken,
-                        "Milka is the best there is! :)"
+                        "Jacob is cool."
                 );
+				break;
+            default:
+                /*log.info("Returns echo message {}: {}", replyToken, text);
+                this.replyText(
+                        replyToken,
+                        text //or whatever text you want, e.g. "Milka is the best there is! :)"
+                );*/
                 break;
         }
     }
