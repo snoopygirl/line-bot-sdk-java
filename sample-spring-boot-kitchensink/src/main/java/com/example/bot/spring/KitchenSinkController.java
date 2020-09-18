@@ -441,6 +441,7 @@ public class KitchenSinkController {
                                                + source);
                 }
                 break;
+			}
             case "confirm": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "Do it?",
