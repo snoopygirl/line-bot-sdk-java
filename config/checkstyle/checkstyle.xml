@@ -19,9 +19,9 @@
 
   <module name="NewlineAtEndOfFile" />
 
-  <module name="FileTabCharacter">
+ <!-- <module name="FileTabCharacter">
     <property name="eachLine" value="true" />
-  </module>
+  </module> -->
 
   <!-- Copyright headers -->
   <module name="RegexpSingleline">
@@ -138,17 +138,17 @@
     <module name="SimplifyBooleanReturn" />
     <module name="StringLiteralEquality" />
 
-    <module name="AvoidStarImport" />
+    <!--<module name="AvoidStarImport" />-->
     <module name="RedundantImport" />
     <module name="UnusedImports" />
-    <module name="ImportOrder">
+    <!--<module name="ImportOrder">
       <property name="groups"
                 value="java,javax,org,android,net,/^com\.(?!linecorp\.|nhn\.|nhncorp\.).*$/,com.linecorp,com.nhn,com.nhncorp,jp.naver" />
       <property name="ordered" value="true" />
       <property name="separated" value="true" />
       <property name="option" value="top" />
       <property name="sortStaticImportsAlphabetically" value="true" />
-    </module>
+    </module>-->
 
     <module name="AtclauseOrder" />
     <module name="JavadocType">
