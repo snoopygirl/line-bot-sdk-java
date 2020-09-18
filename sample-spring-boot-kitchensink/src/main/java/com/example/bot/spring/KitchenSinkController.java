@@ -633,7 +633,7 @@ public class KitchenSinkController {
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
-                        text
+                        "Milka is the best there is! :)"
                 );
                 break;
         }
