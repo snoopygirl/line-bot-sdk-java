@@ -649,6 +649,7 @@ public class KitchenSinkController {
                 );
 				break;
             default:
+				log.info("Does nothing {}: {}", replyToken, text);
                 /*log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
